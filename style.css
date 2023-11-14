@@ -1,0 +1,285 @@
+
+:root{
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        overflow-x: hidden;
+    }
+    
+     .container{
+        width: 100%;
+        height: 100vh;
+        background-color:var(--DarkSlateGrey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .hero{
+        width: 1000px;
+        background-color: var(--White);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+        border-radius: 20px;
+    
+    }
+    
+    .left{
+       padding: 20px;
+    }
+    
+    .left h1{
+    font-size: 4.2rem;
+    margin-bottom: 20px;
+    }
+    
+    .left ul{
+        list-style: none;
+        line-height: 30px;
+        margin: 30px 0;
+    }
+    
+    .left ul li span img{
+      width: 15px;
+      margin-right: 20px;
+    }
+    
+    .bold{
+        font-weight: 600;
+    }
+    
+    form input{
+        display: block;
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid var(--Grey);
+        margin: 10px 0;
+        padding: 15px;
+    }
+    
+    form button{
+        width: 100%;
+        padding: 15px;
+        color: var(--White);
+        background: var(--CharcoalGrey);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0, 0 1px 0 rgba(0, 0, 0, 0.5);
+    }
+    
+    form button:hover{
+        background: linear-gradient(to right, var(--Tomato), red);
+    }
+    
+    .right{
+        height: 500px;
+        background: url(images/illustration-sign-up-desktop.svg);
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+    }
+    
+    
+    form{
+        position: relative;
+    }
+    .error-message{
+        color: red;
+        position: absolute;
+        right: 20px;
+        top: 1px;
+        display: none;
+    }
+    
+    .success-message{
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        top: 0%;
+        left: 50%;
+        background: var(--White);
+        border-radius: 20px;
+        padding: 40px;
+        transform: translate(-50%, -50%) scale(0.1);
+        visibility: hidden;
+        transition: transform 1s, top 1s;
+    }
+    
+    .open-success-message{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .success-message h1{
+        font-size: 50px;
+        margin: 10px 0;
+    }
+    
+    .success-message p{
+        line-height: 30px;
+        margin-bottom: 10px;  
+    }
+    
+    .success-message button{
+        width: 100%;
+        padding: 15px;
+        color: var(--White);
+        background: var(--CharcoalGrey);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .success-message button:hover{
+        background: linear-gradient(to right, var(--Tomato), red);
+    }
+    
+    
+    
+    .attribution {
+        margin-top: 20px; 
+        font-size: 11px;
+        text-align: center; 
+        color: var(--White);
+    }
+    
+    .attribution a {
+         color: hsl(228, 45%, 44%); 
+        } 
+    
+        @media screen and (max-width: 500px){
+    
+            .container{
+                width: 100vw;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--White);
+            }
+    
+            .hero{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+            }
+             
+            
+            .left{
+                width: 300px;
+               padding: 20px;
+               font-size: 14px;
+            }
+            
+            .left h1{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            }
+            
+            .right{
+                width: 100%;
+                background: url(images/illustration-sign-up-mobile.svg);
+                height: 200px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 0 0 10px 10px;
+            }
+            
+            .success-message{
+                width: 100vw;
+            }
+            
+            .open-success-message{
+                visibility: visible;
+                top: 50%;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            
+            .success-message h1{
+                font-size: 30px;
+                margin: 10px 0;
+            }
+            
+            .success-message p{
+                line-height: 30px;
+                margin-bottom: 10px;  
+            }
+            
+            .success-message button{
+                width: 100%;
+                padding: 15px;
+                color: var(--White);
+                background: var(--CharcoalGrey);
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+            }
+            
+            
+            
+            .attribution {
+                color: black;
+            }
+            
+        }
+    
+          @media screen and (min-width: 501px) and (max-width: 1000px){
+    
+    
+    
+            .container{
+                width: 100vw;
+                height: auto;
+                background-color: var(--White);
+                margin: 0 auto;
+                place-content: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow-x: hidden;
+            }
+    
+            .hero{
+                width: 100%;
+                background-color: var(--White);
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                
+            }
+            
+            .attribution { 
+                color: black;
+            }
+    
+            .left{
+                width: 500px;
+            }
+            .right{
+                width: 500px;
+                border-radius: 0 0 20px 20px;
+            }
+            .attribution {
+                color: black;
+            }
+        }
